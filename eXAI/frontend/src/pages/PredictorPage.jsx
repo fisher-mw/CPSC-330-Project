@@ -153,7 +153,7 @@ export default function PredictorPage() {
           {/* Repayment History */}
           <section className="form-section">
             <h2 className="form-section-title">Repayment History</h2>
-            <p className="form-section-desc">Monthly payment status · Sept → Apr 2005</p>
+            <p className="form-section-desc">Monthly payment status · Sept → Apr </p>
             <div className="field-grid-3">
               {PAY_KEYS.map((key, i) => (
                 <div className="field" key={key}>
@@ -171,7 +171,7 @@ export default function PredictorPage() {
           {/* Bill Amounts */}
           <section className="form-section">
             <h2 className="form-section-title">Bill Amounts (TWD)</h2>
-            <p className="form-section-desc">Statement balance each month · Sept → Apr 2005</p>
+            <p className="form-section-desc">Statement balance each month · Sept → Apr </p>
             <div className="field-grid-3">
               {BILL_KEYS.map((key, i) => (
                 <div className="field" key={key}>
@@ -189,7 +189,7 @@ export default function PredictorPage() {
           {/* Payment Amounts */}
           <section className="form-section">
             <h2 className="form-section-title">Payments Made (TWD)</h2>
-            <p className="form-section-desc">Amount paid each month · Sept → Apr 2005</p>
+            <p className="form-section-desc">Amount paid each month · Sept → Apr </p>
             <div className="field-grid-3">
               {PAYAMT_KEYS.map((key, i) => (
                 <div className="field" key={key}>
