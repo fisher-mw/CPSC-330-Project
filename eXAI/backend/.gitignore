@@ -1,0 +1,11 @@
+# Generated artifacts — run train_and_export.py to recreate
+model.pkl
+model_metadata.json
+eda_data.json
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.env
+venv/
