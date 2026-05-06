@@ -1,0 +1,508 @@
+{
+  "PAY_0": {
+    "label": "Repayment Status (Sept 2005)",
+    "type": "bar",
+    "data": [
+      {
+        "name": "-2",
+        "default": 102,
+        "no_default": 680
+      },
+      {
+        "name": "-1",
+        "default": 295,
+        "no_default": 1429
+      },
+      {
+        "name": "0",
+        "default": 568,
+        "no_default": 3868
+      },
+      {
+        "name": "1",
+        "default": 381,
+        "no_default": 715
+      },
+      {
+        "name": "2",
+        "default": 581,
+        "no_default": 239
+      },
+      {
+        "name": "3",
+        "default": 83,
+        "no_default": 19
+      },
+      {
+        "name": "4",
+        "default": 13,
+        "no_default": 7
+      },
+      {
+        "name": "5",
+        "default": 2,
+        "no_default": 7
+      },
+      {
+        "name": "6",
+        "default": 3,
+        "no_default": 2
+      },
+      {
+        "name": "8",
+        "default": 3,
+        "no_default": 3
+      }
+    ]
+  },
+  "LIMIT_BAL": {
+    "label": "Credit Limit (TWD)",
+    "type": "histogram",
+    "data": [
+      {
+        "name": 22250.0,
+        "default": 9e-06,
+        "no_default": 5e-06
+      },
+      {
+        "name": 46750.0,
+        "default": 7e-06,
+        "no_default": 5e-06
+      },
+      {
+        "name": 71250.0,
+        "default": 5e-06,
+        "no_default": 4e-06
+      },
+      {
+        "name": 95750.0,
+        "default": 3e-06,
+        "no_default": 2e-06
+      },
+      {
+        "name": 120250.0,
+        "default": 3e-06,
+        "no_default": 3e-06
+      },
+      {
+        "name": 144750.0,
+        "default": 2e-06,
+        "no_default": 3e-06
+      },
+      {
+        "name": 169250.0,
+        "default": 2e-06,
+        "no_default": 3e-06
+      },
+      {
+        "name": 193750.0,
+        "default": 2e-06,
+        "no_default": 2e-06
+      },
+      {
+        "name": 218250.0,
+        "default": 2e-06,
+        "no_default": 3e-06
+      },
+      {
+        "name": 242750.0,
+        "default": 1e-06,
+        "no_default": 1e-06
+      },
+      {
+        "name": 267250.0,
+        "default": 1e-06,
+        "no_default": 1e-06
+      },
+      {
+        "name": 291750.0,
+        "default": 2e-06,
+        "no_default": 2e-06
+      },
+      {
+        "name": 316250.0,
+        "default": 0.0,
+        "no_default": 1e-06
+      },
+      {
+        "name": 340750.0,
+        "default": 0.0,
+        "no_default": 1e-06
+      },
+      {
+        "name": 365250.0,
+        "default": 1e-06,
+        "no_default": 1e-06
+      },
+      {
+        "name": 389750.0,
+        "default": 0.0,
+        "no_default": 1e-06
+      },
+      {
+        "name": 414250.0,
+        "default": 0.0,
+        "no_default": 0.0
+      },
+      {
+        "name": 438750.0,
+        "default": 0.0,
+        "no_default": 0.0
+      },
+      {
+        "name": 463250.0,
+        "default": 0.0,
+        "no_default": 0.0
+      },
+      {
+        "name": 487750.0,
+        "default": 1e-06,
+        "no_default": 2e-06
+      }
+    ]
+  },
+  "AGE": {
+    "label": "Age",
+    "type": "histogram",
+    "data": [
+      {
+        "name": 22.98,
+        "default": 0.034087,
+        "no_default": 0.024431
+      },
+      {
+        "name": 24.92,
+        "default": 0.045197,
+        "no_default": 0.037234
+      },
+      {
+        "name": 26.88,
+        "default": 0.045702,
+        "no_default": 0.047095
+      },
+      {
+        "name": 28.83,
+        "default": 0.048732,
+        "no_default": 0.051805
+      },
+      {
+        "name": 30.77,
+        "default": 0.039642,
+        "no_default": 0.043636
+      },
+      {
+        "name": 32.73,
+        "default": 0.038379,
+        "no_default": 0.040987
+      },
+      {
+        "name": 34.67,
+        "default": 0.033582,
+        "no_default": 0.04268
+      },
+      {
+        "name": 36.62,
+        "default": 0.037622,
+        "no_default": 0.035616
+      },
+      {
+        "name": 38.58,
+        "default": 0.030805,
+        "no_default": 0.033923
+      },
+      {
+        "name": 40.52,
+        "default": 0.022472,
+        "no_default": 0.029949
+      },
+      {
+        "name": 42.48,
+        "default": 0.027017,
+        "no_default": 0.022444
+      },
+      {
+        "name": 44.42,
+        "default": 0.020452,
+        "no_default": 0.024357
+      },
+      {
+        "name": 46.38,
+        "default": 0.0202,
+        "no_default": 0.018544
+      },
+      {
+        "name": 48.32,
+        "default": 0.016917,
+        "no_default": 0.016925
+      },
+      {
+        "name": 50.27,
+        "default": 0.015655,
+        "no_default": 0.013245
+      },
+      {
+        "name": 52.23,
+        "default": 0.010352,
+        "no_default": 0.009493
+      },
+      {
+        "name": 54.17,
+        "default": 0.0101,
+        "no_default": 0.007064
+      },
+      {
+        "name": 56.12,
+        "default": 0.005807,
+        "no_default": 0.004857
+      },
+      {
+        "name": 58.08,
+        "default": 0.002777,
+        "no_default": 0.002723
+      },
+      {
+        "name": 60.02,
+        "default": 0.007322,
+        "no_default": 0.005813
+      }
+    ]
+  },
+  "BILL_AMT1": {
+    "label": "Bill Amount Sept (TWD)",
+    "type": "histogram",
+    "data": [
+      {
+        "name": 8728.54,
+        "default": 2.6e-05,
+        "no_default": 2.5e-05
+      },
+      {
+        "name": 26369.77,
+        "default": 1e-05,
+        "no_default": 8e-06
+      },
+      {
+        "name": 44011.0,
+        "default": 6e-06,
+        "no_default": 6e-06
+      },
+      {
+        "name": 61652.23,
+        "default": 4e-06,
+        "no_default": 3e-06
+      },
+      {
+        "name": 79293.46,
+        "default": 2e-06,
+        "no_default": 3e-06
+      },
+      {
+        "name": 96934.7,
+        "default": 2e-06,
+        "no_default": 2e-06
+      },
+      {
+        "name": 114575.93,
+        "default": 1e-06,
+        "no_default": 1e-06
+      },
+      {
+        "name": 132217.16,
+        "default": 1e-06,
+        "no_default": 2e-06
+      },
+      {
+        "name": 149858.39,
+        "default": 1e-06,
+        "no_default": 1e-06
+      },
+      {
+        "name": 167499.62,
+        "default": 1e-06,
+        "no_default": 1e-06
+      },
+      {
+        "name": 185140.86,
+        "default": 1e-06,
+        "no_default": 1e-06
+      },
+      {
+        "name": 202782.09,
+        "default": 0.0,
+        "no_default": 1e-06
+      },
+      {
+        "name": 220423.32,
+        "default": 0.0,
+        "no_default": 0.0
+      },
+      {
+        "name": 238064.55,
+        "default": 0.0,
+        "no_default": 0.0
+      },
+      {
+        "name": 255705.78,
+        "default": 0.0,
+        "no_default": 0.0
+      },
+      {
+        "name": 273347.02,
+        "default": 0.0,
+        "no_default": 0.0
+      },
+      {
+        "name": 290988.25,
+        "default": 0.0,
+        "no_default": 0.0
+      },
+      {
+        "name": 308629.48,
+        "default": 0.0,
+        "no_default": 0.0
+      },
+      {
+        "name": 326270.71,
+        "default": 0.0,
+        "no_default": 0.0
+      },
+      {
+        "name": 343911.94,
+        "default": 1e-06,
+        "no_default": 1e-06
+      }
+    ]
+  },
+  "PAY_AMT1": {
+    "label": "Payment Amount Sept (TWD)",
+    "type": "histogram",
+    "data": [
+      {
+        "name": 1506.21,
+        "default": 0.000239,
+        "no_default": 0.000191
+      },
+      {
+        "name": 4518.63,
+        "default": 5.3e-05,
+        "no_default": 6.6e-05
+      },
+      {
+        "name": 7531.05,
+        "default": 1.8e-05,
+        "no_default": 2.6e-05
+      },
+      {
+        "name": 10543.46,
+        "default": 1e-05,
+        "no_default": 1.9e-05
+      },
+      {
+        "name": 13555.88,
+        "default": 4e-06,
+        "no_default": 7e-06
+      },
+      {
+        "name": 16568.3,
+        "default": 2e-06,
+        "no_default": 4e-06
+      },
+      {
+        "name": 19580.72,
+        "default": 1e-06,
+        "no_default": 5e-06
+      },
+      {
+        "name": 22593.14,
+        "default": 1e-06,
+        "no_default": 2e-06
+      },
+      {
+        "name": 25605.55,
+        "default": 0.0,
+        "no_default": 2e-06
+      },
+      {
+        "name": 28617.97,
+        "default": 1e-06,
+        "no_default": 2e-06
+      },
+      {
+        "name": 31630.39,
+        "default": 0.0,
+        "no_default": 1e-06
+      },
+      {
+        "name": 34642.81,
+        "default": 0.0,
+        "no_default": 0.0
+      },
+      {
+        "name": 37655.23,
+        "default": 0.0,
+        "no_default": 1e-06
+      },
+      {
+        "name": 40667.64,
+        "default": 0.0,
+        "no_default": 1e-06
+      },
+      {
+        "name": 43680.06,
+        "default": 0.0,
+        "no_default": 0.0
+      },
+      {
+        "name": 46692.48,
+        "default": 0.0,
+        "no_default": 0.0
+      },
+      {
+        "name": 49704.9,
+        "default": 0.0,
+        "no_default": 0.0
+      },
+      {
+        "name": 52717.32,
+        "default": 0.0,
+        "no_default": 1e-06
+      },
+      {
+        "name": 55729.73,
+        "default": 0.0,
+        "no_default": 0.0
+      },
+      {
+        "name": 58742.15,
+        "default": 2e-06,
+        "no_default": 4e-06
+      }
+    ]
+  },
+  "EDUCATION": {
+    "label": "Education Level (Ordinal)",
+    "type": "bar",
+    "data": [
+      {
+        "name": "0",
+        "default": 10,
+        "no_default": 125
+      },
+      {
+        "name": "1",
+        "default": 389,
+        "no_default": 1115
+      },
+      {
+        "name": "2",
+        "default": 1009,
+        "no_default": 3223
+      },
+      {
+        "name": "3",
+        "default": 623,
+        "no_default": 2506
+      }
+    ]
+  }
+}

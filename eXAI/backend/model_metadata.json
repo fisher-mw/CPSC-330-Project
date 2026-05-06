@@ -1,0 +1,210 @@
+{
+  "metrics": {
+    "accuracy": 0.7966,
+    "precision": 0.5366,
+    "recall": 0.5322,
+    "f1": 0.5344,
+    "baseline_accuracy": 0.649,
+    "baseline_f1": 0.225
+  },
+  "class_distribution": {
+    "no_default": 0.7788,
+    "default": 0.2212
+  },
+  "feature_names": [
+    "standardscaler__EDUCATION",
+    "standardscaler__LIMIT_BAL",
+    "standardscaler__AGE",
+    "standardscaler__PAY_AMT1",
+    "standardscaler__PAY_AMT2",
+    "standardscaler__PAY_AMT3",
+    "standardscaler__PAY_AMT4",
+    "standardscaler__PAY_AMT5",
+    "standardscaler__PAY_AMT6",
+    "standardscaler__BILL_AMT1",
+    "standardscaler__BILL_AMT2",
+    "standardscaler__BILL_AMT3",
+    "standardscaler__BILL_AMT4",
+    "standardscaler__BILL_AMT5",
+    "standardscaler__BILL_AMT6",
+    "standardscaler__PAY_0",
+    "standardscaler__PAY_2",
+    "standardscaler__PAY_3",
+    "standardscaler__PAY_4",
+    "standardscaler__PAY_5",
+    "standardscaler__PAY_6",
+    "onehotencoder-1__SEX_2",
+    "onehotencoder-2__MARRIAGE_0",
+    "onehotencoder-2__MARRIAGE_1",
+    "onehotencoder-2__MARRIAGE_2",
+    "onehotencoder-2__MARRIAGE_3"
+  ],
+  "display_names": {
+    "standardscaler__EDUCATION": "Education Level",
+    "standardscaler__LIMIT_BAL": "Credit Limit (TWD)",
+    "standardscaler__AGE": "Age",
+    "standardscaler__PAY_AMT1": "Payment Amount Sept",
+    "standardscaler__PAY_AMT2": "Payment Amount Aug",
+    "standardscaler__PAY_AMT3": "Payment Amount Jul",
+    "standardscaler__PAY_AMT4": "Payment Amount Jun",
+    "standardscaler__PAY_AMT5": "Payment Amount May",
+    "standardscaler__PAY_AMT6": "Payment Amount Apr",
+    "standardscaler__BILL_AMT1": "Bill Amount Sept",
+    "standardscaler__BILL_AMT2": "Bill Amount Aug",
+    "standardscaler__BILL_AMT3": "Bill Amount Jul",
+    "standardscaler__BILL_AMT4": "Bill Amount Jun",
+    "standardscaler__BILL_AMT5": "Bill Amount May",
+    "standardscaler__BILL_AMT6": "Bill Amount Apr",
+    "standardscaler__PAY_0": "Repayment Status Sept",
+    "standardscaler__PAY_2": "Repayment Status Aug",
+    "standardscaler__PAY_3": "Repayment Status Jul",
+    "standardscaler__PAY_4": "Repayment Status Jun",
+    "standardscaler__PAY_5": "Repayment Status May",
+    "standardscaler__PAY_6": "Repayment Status Apr",
+    "onehotencoder-1__SEX_2": "Sex (Female=1)",
+    "onehotencoder-2__MARRIAGE_1": "Marital Status: Married",
+    "onehotencoder-2__MARRIAGE_2": "Marital Status: Single",
+    "onehotencoder-2__MARRIAGE_3": "Marital Status: Other"
+  },
+  "shap_importance": [
+    {
+      "feature": "standardscaler__PAY_0",
+      "display_name": "Repayment Status Sept",
+      "importance": 0.082082
+    },
+    {
+      "feature": "standardscaler__PAY_2",
+      "display_name": "Repayment Status Aug",
+      "importance": 0.02864
+    },
+    {
+      "feature": "standardscaler__LIMIT_BAL",
+      "display_name": "Credit Limit (TWD)",
+      "importance": 0.024067
+    },
+    {
+      "feature": "standardscaler__PAY_3",
+      "display_name": "Repayment Status Jul",
+      "importance": 0.021036
+    },
+    {
+      "feature": "standardscaler__PAY_AMT1",
+      "display_name": "Payment Amount Sept",
+      "importance": 0.020832
+    },
+    {
+      "feature": "standardscaler__PAY_AMT2",
+      "display_name": "Payment Amount Aug",
+      "importance": 0.020562
+    },
+    {
+      "feature": "standardscaler__PAY_AMT3",
+      "display_name": "Payment Amount Jul",
+      "importance": 0.01939
+    },
+    {
+      "feature": "standardscaler__PAY_4",
+      "display_name": "Repayment Status Jun",
+      "importance": 0.013112
+    },
+    {
+      "feature": "standardscaler__BILL_AMT1",
+      "display_name": "Bill Amount Sept",
+      "importance": 0.012473
+    },
+    {
+      "feature": "standardscaler__PAY_5",
+      "display_name": "Repayment Status May",
+      "importance": 0.011931
+    },
+    {
+      "feature": "standardscaler__PAY_AMT6",
+      "display_name": "Payment Amount Apr",
+      "importance": 0.010076
+    },
+    {
+      "feature": "standardscaler__PAY_6",
+      "display_name": "Repayment Status Apr",
+      "importance": 0.009627
+    },
+    {
+      "feature": "standardscaler__PAY_AMT5",
+      "display_name": "Payment Amount May",
+      "importance": 0.00933
+    },
+    {
+      "feature": "standardscaler__PAY_AMT4",
+      "display_name": "Payment Amount Jun",
+      "importance": 0.009078
+    },
+    {
+      "feature": "standardscaler__BILL_AMT2",
+      "display_name": "Bill Amount Aug",
+      "importance": 0.008123
+    },
+    {
+      "feature": "standardscaler__BILL_AMT3",
+      "display_name": "Bill Amount Jul",
+      "importance": 0.007532
+    },
+    {
+      "feature": "standardscaler__BILL_AMT4",
+      "display_name": "Bill Amount Jun",
+      "importance": 0.007073
+    },
+    {
+      "feature": "standardscaler__BILL_AMT6",
+      "display_name": "Bill Amount Apr",
+      "importance": 0.006448
+    },
+    {
+      "feature": "standardscaler__BILL_AMT5",
+      "display_name": "Bill Amount May",
+      "importance": 0.005878
+    },
+    {
+      "feature": "standardscaler__AGE",
+      "display_name": "Age",
+      "importance": 0.005069
+    },
+    {
+      "feature": "onehotencoder-1__SEX_2",
+      "display_name": "Sex (Female=1)",
+      "importance": 0.003558
+    },
+    {
+      "feature": "onehotencoder-2__MARRIAGE_1",
+      "display_name": "Marital Status: Married",
+      "importance": 0.002153
+    },
+    {
+      "feature": "standardscaler__EDUCATION",
+      "display_name": "Education Level",
+      "importance": 0.002152
+    },
+    {
+      "feature": "onehotencoder-2__MARRIAGE_2",
+      "display_name": "Marital Status: Single",
+      "importance": 0.001471
+    },
+    {
+      "feature": "onehotencoder-2__MARRIAGE_3",
+      "display_name": "Marital Status: Other",
+      "importance": 8e-05
+    },
+    {
+      "feature": "onehotencoder-2__MARRIAGE_0",
+      "display_name": "onehotencoder-2__MARRIAGE_0",
+      "importance": 2e-05
+    }
+  ],
+  "model_info": {
+    "name": "Random Forest Classifier",
+    "n_estimators": 100,
+    "max_depth": 10,
+    "max_features": 5,
+    "class_weight": "balanced",
+    "random_state": 123,
+    "description": "Tuned via GridSearchCV over n_estimators, max_depth, and max_features. class_weight='balanced' handles the 78/22 class imbalance. Primary metric: F1 score."
+  }
+}

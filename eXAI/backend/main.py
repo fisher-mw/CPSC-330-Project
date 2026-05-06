@@ -82,9 +82,16 @@ app = FastAPI(
     lifespan=lifespan,
 )
 
+# Origins: comma-separated list in ALLOWED_ORIGINS env var, or local defaults
+_origins = os.getenv(
+    "ALLOWED_ORIGINS",
+    "http://localhost:3000,http://localhost:5173",
+)
+ALLOWED_ORIGINS = [o.strip() for o in _origins.split(",")]
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000", "http://localhost:5173"],  # CRA + Vite
+    allow_origins=ALLOWED_ORIGINS,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
