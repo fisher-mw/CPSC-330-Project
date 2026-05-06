@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- Dark rounded background -->
+  <rect width="32" height="32" rx="7" fill="#111111"/>
+  <!-- Geometric C: arc from (22,10) counterclockwise through the left side to (22,22) -->
+  <!-- Center at (14,16), radius 10 — opening faces right -->
+  <path
+    d="M22,10 A10,10 0 1,0 22,22"
+    fill="none"
+    stroke="#e8e8e8"
+    stroke-width="3"
+    stroke-linecap="round"
+  />
+</svg>
