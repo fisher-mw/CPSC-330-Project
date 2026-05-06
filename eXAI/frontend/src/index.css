@@ -1,0 +1,583 @@
+/* ── Reset ─────────────────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ── Variables ─────────────────────────────────────────────────── */
+:root {
+  --bg:            #0c0c0c;
+  --surface:       #141414;
+  --surface-2:     #1c1c1c;
+  --border:        #262626;
+  --border-focus:  #444444;
+  --text:          #e8e8e8;
+  --text-muted:    #6a6a6a;
+  --text-faint:    #353535;
+  --white:         #ffffff;
+  --radius:        8px;
+  --radius-sm:     5px;
+  --nav-h:         56px;
+  --max-w:         1260px;
+}
+
+/* ── Base ──────────────────────────────────────────────────────── */
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    'Helvetica Neue', Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── NavBar ────────────────────────────────────────────────────── */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  height: var(--nav-h);
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+}
+
+.navbar-inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 32px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar-title {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  user-select: none;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 32px;
+}
+
+.nav-link {
+  font-size: 13px;
+  text-decoration: none;
+  color: var(--text-muted);
+  letter-spacing: 0.04em;
+  padding-bottom: 3px;
+  border-bottom: 1px solid transparent;
+  transition: color 0.15s, border-color 0.15s;
+}
+
+.nav-link:hover  { color: var(--text); }
+.nav-link.active { color: var(--text); border-bottom-color: var(--border-focus); }
+
+/* ── Page shell ────────────────────────────────────────────────── */
+.page {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 52px 32px 96px;
+}
+
+/* ── Predictor two-column layout ───────────────────────────────── */
+.predictor-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+  align-items: start;
+}
+
+@media (max-width: 900px) {
+  .predictor-layout { grid-template-columns: 1fr; }
+}
+
+/* ── Form sections ─────────────────────────────────────────────── */
+.form-section {
+  margin-bottom: 40px;
+}
+
+.form-section-title {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  padding-bottom: 10px;
+  margin-bottom: 18px;
+  border-bottom: 1px solid var(--border);
+}
+
+.form-section-desc {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: -10px;
+  margin-bottom: 18px;
+}
+
+/* ── Form fields ───────────────────────────────────────────────── */
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin-bottom: 16px;
+}
+
+.field label {
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+}
+
+.field input,
+.field select {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--text);
+  font-size: 14px;
+  font-family: inherit;
+  padding: 9px 12px;
+  width: 100%;
+  outline: none;
+  transition: border-color 0.15s;
+}
+
+.field input:focus,
+.field select:focus {
+  border-color: var(--border-focus);
+}
+
+.field input[type='number'] {
+  -moz-appearance: textfield;
+}
+.field input[type='number']::-webkit-outer-spin-button,
+.field input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.field select {
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 10 10'%3E%3Cpath fill='%236a6a6a' d='M5 7L0.5 2.5h9z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  padding-right: 32px;
+}
+
+.field-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.field-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+@media (max-width: 600px) {
+  .field-row     { grid-template-columns: 1fr; }
+  .field-grid-3  { grid-template-columns: 1fr 1fr; }
+}
+
+/* ── Submit button ─────────────────────────────────────────────── */
+.btn-classify {
+  width: 100%;
+  padding: 13px 24px;
+  background: var(--white);
+  color: #0c0c0c;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-size: 11px;
+  font-weight: 700;
+  font-family: inherit;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: opacity 0.15s;
+  margin-top: 8px;
+}
+
+.btn-classify:hover    { opacity: 0.88; }
+.btn-classify:disabled { opacity: 0.35; cursor: not-allowed; }
+
+/* ── Inline error ──────────────────────────────────────────────── */
+.error-msg {
+  margin-top: 14px;
+  padding: 10px 14px;
+  background: #160e0e;
+  border: 1px solid #3a1e1e;
+  border-radius: var(--radius-sm);
+  font-size: 12px;
+  color: #b06060;
+  line-height: 1.5;
+}
+
+/* ── Result panel ──────────────────────────────────────────────── */
+.result-panel {
+  position: sticky;
+  top: calc(var(--nav-h) + 36px);
+}
+
+.result-empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 320px;
+  border: 1px dashed var(--border);
+  border-radius: var(--radius);
+  color: var(--text-muted);
+  font-size: 13px;
+  text-align: center;
+  padding: 48px 32px;
+  line-height: 1.9;
+}
+
+/* ── Loading spinner ───────────────────────────────────────────── */
+.spinner {
+  width: 22px;
+  height: 22px;
+  border: 2px solid var(--border);
+  border-top-color: var(--text-muted);
+  border-radius: 50%;
+  animation: spin 0.75s linear infinite;
+}
+
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* ── Result card ───────────────────────────────────────────────── */
+.result-card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px 28px 24px;
+  background: var(--surface);
+}
+
+.result-verdict {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding-bottom: 22px;
+  margin-bottom: 22px;
+  border-bottom: 1px solid var(--border);
+}
+
+.verdict-default { color: var(--white); }
+.verdict-ok      { color: var(--text-muted); }
+
+/* ── Probability bar ───────────────────────────────────────────── */
+.result-prob {
+  margin-bottom: 28px;
+}
+
+.prob-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 10px;
+}
+
+.prob-label {
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+}
+
+.prob-value {
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--text);
+}
+
+.prob-bar-track {
+  height: 3px;
+  background: var(--surface-2);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.prob-bar-fill {
+  height: 100%;
+  background: var(--text);
+  border-radius: 2px;
+  transition: width 0.65s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ── SHAP breakdown (predictor page) ───────────────────────────── */
+.shap-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.shap-title {
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+}
+
+.shap-legend {
+  display: flex;
+  gap: 16px;
+}
+
+.shap-legend-item {
+  font-size: 10px;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.shap-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+/* ── Explainability page sections ──────────────────────────────── */
+.explain-section {
+  padding: 52px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.explain-section:first-child { padding-top: 0; }
+.explain-section:last-child  { border-bottom: none; }
+
+.page-title {
+  font-size: 26px;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  color: var(--white);
+  margin-bottom: 14px;
+}
+
+.page-desc {
+  font-size: 14px;
+  color: var(--text-muted);
+  max-width: 660px;
+  line-height: 1.85;
+}
+
+.section-heading {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--text-muted);
+  margin-bottom: 6px;
+}
+
+.section-desc {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-bottom: 28px;
+}
+
+/* ── Metric cards ──────────────────────────────────────────────── */
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+@media (max-width: 768px) {
+  .metrics-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+.metric-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.metric-label {
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+}
+
+.metric-value {
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  color: var(--text);
+  line-height: 1.2;
+}
+
+.metric-delta {
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+/* ── Class distribution bars ───────────────────────────────────── */
+.dist-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 580px;
+  margin-bottom: 18px;
+}
+
+.dist-bar-row {
+  display: grid;
+  grid-template-columns: 100px 1fr 52px;
+  align-items: center;
+  gap: 14px;
+}
+
+.dist-bar-label {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.dist-bar-track {
+  height: 5px;
+  background: var(--surface-2);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.dist-bar-fill {
+  height: 100%;
+  border-radius: 3px;
+}
+
+.dist-bar-pct {
+  font-size: 12px;
+  color: var(--text-muted);
+  text-align: right;
+}
+
+.note {
+  font-size: 12px;
+  color: var(--text-faint);
+}
+
+/* ── Chart containers ──────────────────────────────────────────── */
+.chart-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px;
+}
+
+.chart-title {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  margin-bottom: 18px;
+}
+
+.dist-chart-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+@media (max-width: 768px) {
+  .dist-chart-grid { grid-template-columns: 1fr; }
+}
+
+.chart-legend {
+  display: flex;
+  gap: 18px;
+  margin-top: 10px;
+}
+
+.chart-legend span {
+  font-size: 11px;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.legend-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+/* ── Text section (why explainability) ─────────────────────────── */
+.text-section {
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.text-section p {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.85;
+}
+
+/* ── API error / loading ───────────────────────────────────────── */
+.api-error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  padding: 80px 32px;
+  text-align: center;
+  color: var(--text-muted);
+}
+
+.api-error p { font-size: 14px; }
+
+.api-error code {
+  font-family: ui-monospace, 'Cascadia Code', 'Courier New', monospace;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--text);
+  font-size: 13px;
+  padding: 9px 18px;
+  display: inline-block;
+}
+
+.error-detail {
+  font-size: 11px;
+  color: var(--text-faint);
+}
+
+.loading-state {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 220px;
+  color: var(--text-muted);
+  font-size: 13px;
+  letter-spacing: 0.05em;
+}
