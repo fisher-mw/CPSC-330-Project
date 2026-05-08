@@ -9,7 +9,8 @@ A full-stack machine learning web application that predicts whether a credit car
 ## Features
 
 - **Classifier** — Input applicant profile, repayment history, and billing data to receive a default probability and a SHAP-based breakdown of the top driving factors
-- **Explainability dashboard** — Model performance metrics, class distribution, global feature importance (mean |SHAP|), and per-feature distributions split by default status
+- **Explainability dashboard** — Model performance metrics, class distribution, global feature importance (mean |SHAP|), and per-feature distributions split by default status\
+   **Note: API load times from Render take about 30 seconds on the free plan
 
 ---
 
