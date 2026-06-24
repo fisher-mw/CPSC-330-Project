@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import {
   BarChart, Bar, XAxis, YAxis, Cell,
   Tooltip, ResponsiveContainer,
@@ -44,15 +44,37 @@ function ImportanceTooltip({ active, payload }) {
 }
 
 // ── Component ─────────────────────────────────────────────────────
+const LOAD_TIME_KEY = 'exai_api_load_time_ms'
+
 export default function ExplainabilityPage() {
   const [meta, setMeta]   = useState(null)
   const [eda, setEda]     = useState(null)
   const [error, setError] = useState(null)
+  const [elapsed, setElapsed] = useState(0)
+  const startRef = useRef(null)
+
+  const estimatedSeconds = (() => {
+    const stored = localStorage.getItem(LOAD_TIME_KEY)
+    return stored ? Math.round(Number(stored) / 1000) : 30
+  })()
 
   useEffect(() => {
+    startRef.current = Date.now()
+    const timer = setInterval(() => {
+      setElapsed(Math.floor((Date.now() - startRef.current) / 1000))
+    }, 1000)
+
     Promise.all([getMetadata(), getEda()])
-      .then(([m, e]) => { setMeta(m); setEda(e) })
+      .then(([m, e]) => {
+        const duration = Date.now() - startRef.current
+        localStorage.setItem(LOAD_TIME_KEY, String(duration))
+        setMeta(m)
+        setEda(e)
+      })
       .catch(err => setError(err.message))
+      .finally(() => clearInterval(timer))
+
+    return () => clearInterval(timer)
   }, [])
 
   if (error) return (
@@ -67,7 +89,10 @@ export default function ExplainabilityPage() {
 
   if (!meta) return (
     <div className="page">
-      <div className="loading-state">Loading...</div>
+      <div className="loading-state">
+        Loading model data... {elapsed}s
+        {estimatedSeconds > 0 && ` / ~${estimatedSeconds}s`}
+      </div>
     </div>
   )
 
@@ -265,7 +290,7 @@ export default function ExplainabilityPage() {
           <p>
             Credit default classification directly determines whether an individual
             can access loans, credit cards, or financial products. A black-box verdict
-            — even an accurate one — fails the people it affects if they cannot
+            (even an accurate one) fails the people it affects if they cannot
             understand or challenge its basis. Regulators in many jurisdictions now
             require that automated credit decisions be explainable.
           </p>
@@ -280,7 +305,7 @@ export default function ExplainabilityPage() {
             Per-prediction SHAP breakdowns, visible on the Classifier page after each
             run, let an analyst explain exactly which factors drove a specific decision.
             This makes the model auditable and interpretable in contexts where decisions
-            must be justified — whether to regulators, to the client, or to the institution.
+            must be justified to regulators, to the client, or to the institution.
           </p>
         </div>
       </section>
