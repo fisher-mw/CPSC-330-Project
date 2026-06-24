@@ -1,6 +1,10 @@
 # Credit Card Default Classifier
 
+<<<<<<< HEAD
 A full-stack machine learning web application that predicts whether a credit card client is likely to default on their next payment. Built for CPSC-330 (Applied Machine Learning) with an emphasis on explainable AI — because decisions that affect financial access need to be transparent.
+=======
+A full-stack machine learning web application that predicts whether a credit card client is likely to default on their next payment. Built for CPSC-330 (Applied Machine Learning) with an emphasis on explainable AI, as decisions that affect financial access need to be transparent.
+>>>>>>> 8a8dd9dc831d9dcf3eddb6b1089d4ba872fb3917
 
 **Live demo:** [Frontend](https://cpsc-330-project.vercel.app) | [API Docs](https://cpsc-330-project.onrender.com/docs)
 
@@ -9,8 +13,13 @@ A full-stack machine learning web application that predicts whether a credit car
 ## Features
 
 - **Classifier** — Input applicant profile, repayment history, and billing data to receive a default probability and a SHAP-based breakdown of the top driving factors
+<<<<<<< HEAD
 - **Explainability dashboard** — Model performance metrics, class distribution, global feature importance (mean |SHAP|), and per-feature distributions split by default status
 - Monochromatic, minimalist UI designed for clarity in a professional/academic context
+=======
+- **Explainability dashboard** — Model performance metrics, class distribution, global feature importance (mean |SHAP|), and per-feature distributions split by default status\
+   **Note: API load times from Render take about 30 seconds on the free plan
+>>>>>>> 8a8dd9dc831d9dcf3eddb6b1089d4ba872fb3917
 
 ---
 
